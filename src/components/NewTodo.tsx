@@ -4,7 +4,7 @@ import { TodosContext } from '../store/todos-context';
 import classes from './NewTodo.module.css';
 
 const NewTodo: React.FC = () => {
-const [todo, setTodo] = useState("")
+const [todo, setTodo] = useState<string>("")
 
 const handleChange = (e: React.ChangeEvent<HTMLInputElement>)=>
 {
@@ -41,7 +41,7 @@ const submitHandler = (event: React.FormEvent) => {
   return (
     <form onSubmit={submitHandler} className={classes.form}>
       {/* <form className={classes.form}> */}
-            <label htmlFor='text'>Todo in React & TypeScript</label>
+            <label htmlFor='text'>Todo React & TypeScript</label>
       <input type='text' id='text' value={todo} onChange={handleChange} />
       <button>Add Todo</button>
     </form>

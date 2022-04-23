@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import Todo from '../models/todo';
-
-type TodosContextObj = {
+// type TodosContextObj = {} equal sign with type aliases
+interface TodosContextObj {
   items: Todo[];
   addTodo: (text: string) => void;
   removeTodo: (id: string) => void;
