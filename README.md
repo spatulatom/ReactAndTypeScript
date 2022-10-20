@@ -13,7 +13,7 @@
   <p>
     a to-do list is a TypeScript in React webb app - this repository contains its frontend source code 
     <br />
-    <a href="https://github.com/spatulatom/todo-reactjs-typescript/tree/master"><strong>View the deployed app »</strong></a>
+    <a href="https://spatulatom.github.io/todo-reactjs-typescript/"><strong>View the deployed app »</strong></a>
     <br />
     <br />
    
@@ -60,7 +60,7 @@ This TypeScript in React To-Do list allows us to add tasks to our list and then 
 ## Acknowledgments
 
 
-* this project was completed at a finishing project of the Udemy course <a href="https://www.udemy.com/course/understanding-typescript/learn/lecture/17751414?start=0#overview">Understanding TypeScript</a>
+* this project was completed at a finishing project of the Udemy course <a href="https://www.udemy.com/course/understanding-typescript/learn/lecture/17751414?start=0#overview">Understanding TypeScript.</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
