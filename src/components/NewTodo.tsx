@@ -41,7 +41,7 @@ const submitHandler = (event: React.FormEvent) => {
   return (
     <form onSubmit={submitHandler} className={classes.form}>
       {/* <form className={classes.form}> */}
-            <label htmlFor='text'>Todo React & TypeScript</label>
+            <label htmlFor='text'>Todo React +  TypeScript</label>
       <input type='text' id='text' value={todo} onChange={handleChange} />
       <button>Add Todo</button>
     </form>
