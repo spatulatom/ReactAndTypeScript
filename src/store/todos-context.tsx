@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 
 import Todo from '../models/todo';
 // type TodosContextObj = {} equal sign with type aliases
-interface TodosContextObj {
+type TodosContextObj = {
   items: Todo[];
   addTodo: (text: string) => void;
   removeTodo: (id: string) => void;
 };
 
 // we eksporting TodoContext, why? apparently we need that for  use context later
-export const TodosContext= React.createContext<TodosContextObj>({
+export const TodosContext= React.createContext({} as TodosContextObj)
   // this is just pure JS her yet decribing function is somewhat new
   // like why there is nothing there in curly brackets
-  items: [],
-  addTodo: (text:string) => {},
-  removeTodo: (id: string) => {},
-});
+//   items: [],
+//   addTodo: (text:string) => {},
+//   removeTodo: (id: string) => {},
+// });
 
 const TodosContextProvider: React.FC = (props) => {
   // we only have props.children and they default and therfore
