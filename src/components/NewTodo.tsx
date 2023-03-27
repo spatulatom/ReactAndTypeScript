@@ -1,4 +1,4 @@
-import React, { useContext, useState, ReactEventHandler } from 'react';
+import React, { useContext, useState} from 'react';
 
 import { TodosContext } from '../store/todos-context';
 import classes from './NewTodo.module.css';
