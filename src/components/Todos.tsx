@@ -15,6 +15,7 @@ const Todos: React.FC = () => {
           text={item.text}
           onRemoveTodo={todosCtx.removeTodo.bind(null, item.id)}
         />
+       
       ))}
     </ul>
   );
