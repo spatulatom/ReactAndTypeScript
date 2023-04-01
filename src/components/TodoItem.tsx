@@ -1,4 +1,6 @@
 import classes from './TodoItem.module.css';
+import { TodosContext } from '../store/todos-context';
+import React, { useContext } from 'react';
 
 // const TodoItem: React.FC<{ text: string; onRemoveTodo: () => void }> = (
 //   props
@@ -14,12 +16,14 @@ import classes from './TodoItem.module.css';
 
 type TodoItemProps = {
   text: string;
-  onRemoveTodo: () => void;
+  itemId: string;
 };
 
-export default function TodoItem({ text, onRemoveTodo }: TodoItemProps) {
+export default function TodoItem({ text, itemId }: TodoItemProps) {
+  const todosCtx = useContext(TodosContext);
+
   return (
-    <li className={classes.item} onClick={onRemoveTodo}>
+    <li className={classes.item} onClick={() => todosCtx.removeTodo(itemId)}>
       {text}
     </li>
   );

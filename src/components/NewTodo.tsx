@@ -1,31 +1,26 @@
-import React, { useContext, useState} from 'react';
+import React, { useContext, useState } from 'react';
 
 import { TodosContext } from '../store/todos-context';
 import classes from './NewTodo.module.css';
 
 const NewTodo: React.FC = () => {
-const [todo, setTodo] = useState<string>("")
+  const [todo, setTodo] = useState<string>('');
 
-const handleChange = (e: React.ChangeEvent<HTMLInputElement>)=>
-{
- return  setTodo(e.target.value);
-};
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    return setTodo(e.target.value);
+  };
 
-
-const todosCtx = useContext(TodosContext);
-const submitHandler = (event: React.FormEvent) => {
+  const todosCtx = useContext(TodosContext);
+  const submitHandler = (event: React.FormEvent) => {
     event.preventDefault();
-
-  
-
     // something I missing here, the check for the value entered
     // is only here so it means that the possobility of it being zero
-    // which basucally is nul exist up to this pointso it must have passed 
+    // which basucally is nul exist up to this pointso it must have passed
     // the code above where exclamation mark prevents the value from being
-    // null, 
+    // null,
     // unless that prevents empty spaceces which tehnicalyy are not null
     // and what acually prevents that value from being null is the <form>
-    // itself 
+    // itself
 
     if (todo.trim().length === 0) {
       // throw an error
@@ -33,16 +28,14 @@ const submitHandler = (event: React.FormEvent) => {
     }
 
     todosCtx.addTodo(todo);
-    setTodo("")
-    
-    
+    setTodo('');
   };
 
   return (
     <form onSubmit={submitHandler} className={classes.form}>
       {/* <form className={classes.form}> */}
-            <label htmlFor='text'>Todo React +  TypeScript</label>
-      <input type='text' id='text' value={todo} onChange={handleChange} />
+      <label htmlFor="text">Todo React + TypeScript</label>
+      <input type="text" id="text" value={todo} onChange={handleChange} />
       <button>Add Todo</button>
     </form>
   );
