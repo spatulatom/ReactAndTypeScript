@@ -4,7 +4,7 @@ import { TodosContext } from '../store/todos-context';
 import classes from './NewTodo.module.css';
 
 const NewTodo: React.FC = () => {
-  const [todo, setTodo] = useState<string>('');
+  const [todo, setTodo] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     return setTodo(e.target.value);

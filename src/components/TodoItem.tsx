@@ -21,9 +21,12 @@ type TodoItemProps = {
 
 export default function TodoItem({ text, itemId }: TodoItemProps) {
   const todosCtx = useContext(TodosContext);
+  const removeTodo = ()=> {
+    todosCtx.removeTodo(itemId)
+  }
 
   return (
-    <li className={classes.item} onClick={() => todosCtx.removeTodo(itemId)}>
+    <li className={classes.item} onClick={removeTodo}>
       {text}
     </li>
   );
